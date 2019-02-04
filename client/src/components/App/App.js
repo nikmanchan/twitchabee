@@ -3,12 +3,12 @@ import './App.css';
 import {BrowserRouter, Route} from 'react-router-dom';
 import Navbar from '../Navbar/Navbar';
 
-const PageOne = () => {
-  return <div>PageOne</div>;
+const home = () => {
+  return <div>Home</div>;
 }
 
-const PageTwo = () => {
-  return <div>PageTwo</div>;
+const streams = () => {
+  return <div>Streams</div>;
 }
 
 class App extends Component {
@@ -18,8 +18,8 @@ class App extends Component {
       <Navbar />
           <BrowserRouter>
             <div>
-              <Route path="/" exact component={PageOne} />
-              <Route path="/pagetwo" exact component={PageTwo} />
+              <Route path="/" exact component={home} />
+              <Route path="/streams" exact component={streams} />
 
             </div>
           </BrowserRouter>
