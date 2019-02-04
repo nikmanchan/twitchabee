@@ -8,10 +8,10 @@ import {
 } from 'react-router-dom';
 import Navbar from '../Navbar/Navbar';
 import Streams from '../Streams/Streams';
-import StreamCreate from '../StreamCreate/StreamCreate';
-import StreamEdit from '../StreamEdit/StreamEdit';
-import StreamDelete from '../StreamDelete/StreamDelete';
-import StreamShow from '../StreamShow/StreamShow';
+import StreamCreate from '../Streams/StreamCreate';
+import StreamEdit from '../Streams/StreamEdit';
+import StreamDelete from '../Streams/StreamDelete';
+import StreamShow from '../Streams/StreamShow';
 
 const home = () => {
   return <h2>Home</h2>;

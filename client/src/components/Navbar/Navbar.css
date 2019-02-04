@@ -3,3 +3,12 @@
     margin: auto;
     height: 10vh;
 }
+
+.MuiAppBar-colorPrimary-11 {
+    color: #fff;
+    background-color: #3fa1b5;
+}
+
+.appBar {
+    background-color: #3fa1b5;
+}
