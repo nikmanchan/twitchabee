@@ -8,6 +8,10 @@ import {
 } from 'react-router-dom';
 import Navbar from '../Navbar/Navbar';
 import Streams from '../Streams/Streams';
+import StreamCreate from '../StreamCreate/StreamCreate';
+import StreamEdit from '../StreamEdit/StreamEdit';
+import StreamDelete from '../StreamDelete/StreamDelete';
+import StreamShow from '../StreamShow/StreamShow';
 
 const home = () => {
   return <h2>Home</h2>;
@@ -23,6 +27,10 @@ class App extends Component {
             <div>
               <Route path="/" exact component={home} />
               <Route path="/streams" exact component={Streams} />
+              <Route path="/streams/new" exact component={StreamCreate} />
+              <Route path="/streams/edit" exact component={StreamEdit} />
+              <Route path="/streams/delete" exact component={StreamDelete} />
+              <Route path="/streams/show" exact component={StreamShow} />
 
             </div>
           </Router>
