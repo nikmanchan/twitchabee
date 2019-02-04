@@ -1,28 +1,31 @@
 import React, { Component } from 'react';
 import './App.css';
-import {BrowserRouter, Route} from 'react-router-dom';
+import {
+  HashRouter as Router,
+  Route,
+  Redirect,
+  Switch,
+} from 'react-router-dom';
 import Navbar from '../Navbar/Navbar';
+import Streams from '../Streams/Streams';
 
 const home = () => {
-  return <div>Home</div>;
+  return <h2>Home</h2>;
 }
 
-const streams = () => {
-  return <div>Streams</div>;
-}
 
 class App extends Component {
   render() {
     return (
       <div className="App">
       <Navbar />
-          <BrowserRouter>
+          <Router>
             <div>
               <Route path="/" exact component={home} />
-              <Route path="/streams" exact component={streams} />
+              <Route path="/streams" exact component={Streams} />
 
             </div>
-          </BrowserRouter>
+          </Router>
       </div>
     );
   }

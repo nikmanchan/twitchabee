@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import './Navbar.css'
 // import { connect } from "react-redux";
-// import {BrowserRouter, Route} from 'react-router-dom';
+import {HashRouter as Router, withRouter, Link} from 'react-router-dom';
 import logo from './logo.png';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
@@ -25,6 +26,11 @@ const styles = {
   };
 
 class Navbar extends Component {
+
+    handleStreamClick = () => {
+        this.props.history.push('/streams');
+    }
+
     render() {
         const { classes } = this.props;
         
@@ -36,10 +42,22 @@ class Navbar extends Component {
               <MenuIcon />
             </IconButton>
             {/* <Typography variant="h6" color="inherit" className={classes.grow}> */}
-              <img src={logo} alt="logo" width="80%" ></img>
+            {/* <div className="logo"> */}
+              <img src={logo} alt="logo" className="logo"></img>
+            {/* </div> */}
             {/* </Typography> */}
-            <Button color="inherit">Streams</Button>
-            <Button color="inherit">Login</Button>
+            <Router>
+            <div>
+                <Button>
+                    <Link to="/" color="inherit" >Home</Link>
+                </Button>
+                &emsp;
+                <Button>
+                    <Link to="/streams" color="inherit">Streams</Link>
+                </Button>
+
+            </div>
+            </Router>
           </Toolbar>
         </AppBar>
       </div>
